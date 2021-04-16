@@ -1,20 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <Dummy :header-name="'Hesham'" :main-paragraph="'hesham is a good man'"/>
-  <HelloWorld/>
-
-<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-
+  <div>
+    <Dummy :header-name="name" :main-paragraph="'hesham is not a good man'" :x=10 :y=5 />
+      <div>{{ count }}</div>
+      <div>{{ name }}</div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 import Dummy from './components/Dummy.vue'
+
 export default {
   name: 'App',
   components: {
-    Dummy,
-    HelloWorld
+    Dummy
+  },
+  data: function () {
+    return {
+      count: 0,
+      name: "Ahmad"
+    }
   }
 }
 </script>
